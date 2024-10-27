@@ -1,7 +1,7 @@
 <?php
 
 // settings
-define('THEME_NAME', 'template');
+define('THEME_NAME', 'lunar');
 
 // read stylesheet (Production and Editor)
 add_action('wp_enqueue_scripts', fn () =>
