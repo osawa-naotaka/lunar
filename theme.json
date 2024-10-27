@@ -24,6 +24,29 @@
 				}
 			]
 		},
+		"border": {
+			"color": true
+		},
+		"color": {
+			"link": true,
+			"palette": [
+				{
+					"slug": "main",
+					"color": "#303030",
+					"name": "Main Color"
+				},
+				{
+					"slug": "background",
+					"color": "#f0f0f0",
+					"name": "Background Color"
+				},
+				{
+					"slug": "accent",
+					"color": "#d7003a",
+					"name": "Accent Color"
+				}
+			]
+		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {

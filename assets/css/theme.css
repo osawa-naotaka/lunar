@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+article.post-summary {
+    margin-block: 96px;
+}
+
+article.post > header {
+    margin-block: 32px;
+}
