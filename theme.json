@@ -1,6 +1,25 @@
 {
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#303030",
+					"name": "Main Color",
+					"slug": "main"
+				},
+				{
+					"color": "#f0f0f0",
+					"name": "Background Color",
+					"slug": "background"
+				},
+				{
+					"color": "#d7003a",
+					"name": "Accent Color",
+					"slug": "accent"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
@@ -24,34 +43,82 @@
 				}
 			]
 		},
-		"border": {
-			"color": true
-		},
-		"color": {
-			"link": true,
-			"palette": [
-				{
-					"slug": "main",
-					"color": "#303030",
-					"name": "Main Color"
-				},
-				{
-					"slug": "background",
-					"color": "#f0f0f0",
-					"name": "Background Color"
-				},
-				{
-					"slug": "accent",
-					"color": "#d7003a",
-					"name": "Accent Color"
-				}
-			]
-		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"blocks": {
+			"core/heading": {
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--preset--spacing--60)",
+						"top": "var(--wp--preset--spacing--60)"
+					}
+				}
+			},
+			"core/paragraph": {
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--preset--spacing--50)",
+						"top": "var(--wp--preset--spacing--50)"
+					}
+				}
+			}
+		},
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--main)"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "8rem"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "2rem"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "1.5rem"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "1.2rem"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "1rem"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "1rem"
+				}
+			},
+			"heading": {
+				"typography": {
+					"lineHeight": "1.8"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--main)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				}
+			}
+		},
 		"spacing": {
 			"blockGap": "0px"
+		},
+		"typography": {
+			"fontSize": "18px",
+			"lineHeight": "1.8"
 		}
 	},
 	"templateParts": [
