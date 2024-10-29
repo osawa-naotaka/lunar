@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+:root {
+    --lunar-space-inline: 32px;
+    --lunar-space-block: 32px;
+    --lunar-space-block-large: 64px;
+}
+
+:root {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+p {
+    text-indent: 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+/* padding left, right for smartphone */
+main > section,
+.site-header > h1,
+main > .pagination {
+    padding-inline: var(--lunar-space-inline) !important;
+    box-sizing: content-box !important;
+}
+
+/* site tile */
+.site-header > h1 {
+    font-size: 8rem;
+}
+@media screen and (max-width: 700px) {
+    .site-header > h1 {
+        font-size: 4rem !important;
+    }
+}
+
+/* post title */
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 3px solid;
+}
+
+/* site header */
+.site-header {
+}
+
+/* home page */
+.post-summaries > * {
+    margin-block-end: 4rem !important;
+}
+article.post-summary > header {
+    margin-block-end: 1.5rem;
+}
+
+/* post page */
+main.single-post > * {
+    margin-block-end: 4rem !important;
+}
+
+article.post {
+}
+
+article.post > header {
+    margin-block-end: 1.5rem !important;
+}
+
+/* spacing between article header and post */
+article.post > * + * {
+    margin-block: 1rem;
+}
+
+/* post headers */
+h3 {
+    font-size: 1.2re;
+    background-color: var(--wp--preset--color--header-background);
+    padding-inline: 1rem;
+    padding-block-start: 3px;
+    border-radius: 4px;
+    color: var(--wp--preset--color--header-text);
+    margin-block-start: 3rem !important;
+}
+
+h4 {
+    border-bottom: 2px solid var(--wp--preset--color--header-background);
+    margin-block-start: 2rem !important;
+}
+
+/* post main text */
+.main-text > * + * {
+    margin-block-start: 1.5rem;
+}
+

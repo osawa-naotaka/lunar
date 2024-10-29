@@ -1,2 +1,2 @@
-# wordpress-theme-template
-theme template for WordPress
+# luner
+WordPress theme for lulliecat

@@ -1,6 +1,35 @@
 {
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#303030",
+					"name": "Main Color",
+					"slug": "main"
+				},
+				{
+					"color": "#f0f0f0",
+					"name": "Background Color",
+					"slug": "background"
+				},
+				{
+					"color": "#615c66",
+					"name": "Header Background Color",
+					"slug": "header-background"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Header Text Color",
+					"slug": "header-text"
+				},
+				{
+					"color": "#d7003a",
+					"name": "Accent Color",
+					"slug": "accent"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
@@ -27,6 +56,17 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--main)"
+		},
+		"elements": {
+			"link": {
+				"typography": {
+					"textDecoration": "none"
+				}
+			}
+		},
 		"spacing": {
 			"blockGap": "0px"
 		}
