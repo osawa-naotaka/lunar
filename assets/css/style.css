@@ -1,9 +1,7 @@
 @charset "utf-8";
 
 :root {
-    --lunar-space-inline: 32px;
-    --lunar-space-block: 32px;
-    --lunar-space-block-large: 64px;
+    --lunar-space-block-large: 4rem;
 }
 :root {
     font-size: 18px;
@@ -19,7 +17,7 @@ a {
 /* padding left and right for smartphone */
 .site-header > *,
 main > * {
-    padding-inline: var(--lunar-space-inline) !important;
+    padding-inline: 1rem !important;
     box-sizing: content-box !important;
 }
 
@@ -44,7 +42,7 @@ article > header > .post-meta {
 }
 article > * + * {
     /* spacing between article header and post */
-    margin-block-start: 1rem !important;
+    margin-block-start: 1.5rem !important;
 }
 article > .main-text > h3 {
     font-size: 1.2rem;
@@ -65,16 +63,16 @@ article > .main-text > * + * {
 
 /* home page */
 .post-summaries > * + * {
-    margin-block-start: 4rem;
+    margin-block-start: var(--lunar-space-block-large);
 }
 
 /* post page */
 .lunar-single-post > * + * {
-    margin-block-start: 4rem;
+    margin-block-start: var(--lunar-space-block-large);
 }
 
 /* footer */
 .site-footer {
-    margin-block-start: 4rem;
+    margin-block-start: var(--lunar-space-block-large);
 }
 
