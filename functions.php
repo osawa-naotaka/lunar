@@ -50,7 +50,8 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_script');
 add_action('enqueue_block_editor_assets', 'enqueue_theme_script');
 
 // favicon
-add_action( 'wp_head', function() {
+function get_favicon_url($name)
+{
     $media_items = get_posts( [
         'post_type'      => 'attachment',
         'posts_per_page' => -1,
@@ -60,10 +61,26 @@ add_action( 'wp_head', function() {
     foreach ( $media_items as $item ) {
       $file_name = basename( get_attached_file( $item->ID ) );
   
-      if ( $file_name === "favicon.svg" ) {
+      if ( $file_name === $name ) {
         $favicon_url = wp_get_attachment_url( $item->ID );
-        echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( $favicon_url ) . '">';
-        return;
+        return $favicon_url;
       }
     }
+
+    return NULL;
+}
+add_action( 'wp_head', function() {
+    if($ico = get_favicon_url('favicon.ico'))
+    {
+        echo '<link rel="icon" sizes="48x48" href="' . esc_url( $ico ) . '">';
+    }
+    if($svg = get_favicon_url('favicon.svg'))
+    {
+        echo '<link rel="icon" sizes="any" type="image/svg+xml" href="' . esc_url( $svg ) . '">';
+    }
 });
+
+// allow ico upload
+add_filter( 'upload_mimes', fn ($mimes) =>
+    array_merge($mimes, ['ico' => 'image/vnd.microsoft.icon'])
+);
