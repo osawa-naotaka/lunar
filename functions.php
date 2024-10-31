@@ -62,8 +62,7 @@ function get_favicon_url($name)
       $file_name = basename( get_attached_file( $item->ID ) );
   
       if ( $file_name === $name ) {
-        $favicon_url = wp_get_attachment_url( $item->ID );
-        return $favicon_url;
+        return wp_get_attachment_url( $item->ID );
       }
     }
 
@@ -79,8 +78,3 @@ add_action( 'wp_head', function() {
         echo '<link rel="icon" sizes="any" type="image/svg+xml" href="' . esc_url( $svg ) . '">';
     }
 });
-
-// allow ico upload
-add_filter( 'upload_mimes', fn ($mimes) =>
-    array_merge($mimes, ['ico' => 'image/vnd.microsoft.icon'])
-);
